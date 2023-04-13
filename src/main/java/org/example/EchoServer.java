@@ -35,8 +35,4 @@ public class EchoServer {
         clientSocket.close();
         serverSocket.close();
     }
-    public static void main(String[] args) throws IOException {
-        EchoServer server=new EchoServer();
-        server.start(4444);
-    }
 }
