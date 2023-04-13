@@ -1,8 +1,7 @@
 import org.example.EchoClient;
-import org.example.GreetClient;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.IOException;
 
@@ -10,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Testen {
     EchoClient client;
+
     @Before
     public void setup() throws IOException {
         client = new EchoClient();
@@ -20,14 +20,6 @@ public class Testen {
     public void tearDown() throws IOException {
         client.stopConnection();
     }
-
-//    @Test
-//    public void givenGreetingClient_whenServerRespondsWhenStarted_thenCorrect() throws IOException {
-//        GreetClient client = new GreetClient();
-//        client.startConnection("127.0.0.1", 6666);
-//        String response = client.sendMessage("hello server");
-//        assertEquals("hello client", response);
-//    }
 
     @Test
     public void givenClient_whenServerEchosMessage_thenCorrect() throws IOException {

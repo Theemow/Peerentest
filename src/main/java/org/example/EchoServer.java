@@ -36,7 +36,7 @@ public class EchoServer {
         serverSocket.close();
     }
     public static void main(String[] args) throws IOException {
-        GreetServer server=new GreetServer();
+        EchoServer server=new EchoServer();
         server.start(4444);
     }
 }
